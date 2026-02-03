@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini Click Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <div class="stat">时间：<span id="time">30.0</span>s</div>
+      <div class="stat">得分：<span id="score">0</span></div>
+      <button id="start" class="btn">开始</button>
+    </header>
+
+    <section class="board">
+      <button id="target" class="target" disabled>点我</button>
+      <div id="hint" class="hint">点击「开始」进入 30 秒挑战</div>
+    </section>
+
+    <footer class="foot">
+      <div class="small">规则：开始后点击圆按钮得分，按钮会随机移动。</div>
+    </footer>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
