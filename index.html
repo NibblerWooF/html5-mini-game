@@ -3,25 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mini Click Game</title>
+  <title>太阳系模拟器</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="wrap">
     <header class="top">
-      <div class="stat">时间：<span id="time">30.0</span>s</div>
-      <div class="stat">得分：<span id="score">0</span></div>
-      <button id="start" class="btn">开始</button>
+      <h1>太阳系模拟器</h1>
+      <p>观察八大行星围绕太阳公转，可调节模拟速度并暂停/继续。</p>
     </header>
 
-    <section class="board">
-      <button id="target" class="target" disabled>点我</button>
-      <div id="hint" class="hint">点击「开始」进入 30 秒挑战</div>
+    <section class="controls" aria-label="控制面板">
+      <label for="speed">模拟速度：<span id="speedValue">1.0x</span></label>
+      <input id="speed" type="range" min="0.2" max="5" step="0.1" value="1" />
+      <button id="toggle" class="btn" type="button">暂停</button>
+      <button id="reset" class="btn" type="button">重置视角</button>
     </section>
 
-    <footer class="foot">
-      <div class="small">规则：开始后点击圆按钮得分，按钮会随机移动。</div>
-    </footer>
+    <section class="canvas-card">
+      <canvas id="space" width="1100" height="700" aria-label="太阳系轨道模拟"></canvas>
+      <div class="hint">提示：拖动滑块可以加速/减速行星运行。</div>
+    </section>
   </main>
 
   <script src="game.js"></script>
